@@ -17,7 +17,7 @@ namespace HQTCSDL_DATH2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConnectDB());
+            Application.Run(new ConnectDB()); // go to ConnectDB.cs, F7 view code
 
         }
     }
