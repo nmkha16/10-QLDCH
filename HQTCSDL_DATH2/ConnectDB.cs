@@ -25,13 +25,25 @@ namespace HQTCSDL_DATH2
         {
             string connectionString;
             SqlConnection cnn;
+            // build connection string to sql
             connectionString = @"Data Source =";
             connectionString += sv_name.Text + ";Initial Catalog=" + db_name.Text + ";User ID=" + user.Text + ";Password=" + pass.Text;
-            System.Diagnostics.Debug.WriteLine(connectionString);
-            cnn = new SqlConnection(connectionString);
-            cnn.Open();
-            MessageBox.Show("Connected");
-            cnn.Close();
+            //System.Diagnostics.Debug.WriteLine(connectionString);
+            try
+            {
+                cnn = new SqlConnection(connectionString);
+                cnn.Open();
+                //this.Hide();
+                MessageBox.Show("Connected");
+                // open new form Interface()
+                Interface interface1 = new Interface();
+                interface1.ShowDialog();
+                cnn.Close();
+            }
+            catch
+            {// do nothing }
+
+            }
         }
     }
 }
