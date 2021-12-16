@@ -18,3 +18,10 @@ application/logs/*
 *.cache
 *.cache
 HQTCSDL_DATH2/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+HQTCSDL_DATH2/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.cache
+HQTCSDL_DATH2/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+HQTCSDL_DATH2/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+HQTCSDL_DATH2/obj/Debug/HQTCSDL_DATH2.csproj.GenerateResource.cache
+HQTCSDL_DATH2/obj/Debug/HQTCSDL_DATH2.exe
+HQTCSDL_DATH2/obj/Debug/HQTCSDL_DATH2.pdb

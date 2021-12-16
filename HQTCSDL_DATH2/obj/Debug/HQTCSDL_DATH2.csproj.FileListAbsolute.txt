@@ -26,3 +26,4 @@ D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.Core
 D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.exe
 D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.pdb
 D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\bin\Debug\HQTCSDL_DATH2.pdb
+D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.AssemblyReference.cache

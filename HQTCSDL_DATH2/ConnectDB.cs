@@ -18,7 +18,6 @@ namespace HQTCSDL_DATH2
 
             InitializeComponent();
             db_name.Text = "QLDatVaChuyenHang";
-            user.Text = "sa";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,7 +26,7 @@ namespace HQTCSDL_DATH2
             SqlConnection cnn;
             // build connection string to sql
             connectionString = @"Data Source =";
-            connectionString += sv_name.Text + ";Initial Catalog=" + db_name.Text + ";User ID=" + user.Text + ";Password=" + pass.Text;
+            connectionString += sv_name.Text + ";Initial Catalog=" + db_name.Text + ";Integrated Security=True;";
             //System.Diagnostics.Debug.WriteLine(connectionString);
             try
             {
