@@ -13,8 +13,8 @@ namespace HQTCSDL_DATH2
 {
     public partial class DoiTac : Form
     {
-        ConnectDB cdb;
-        SqlConnection cnn;
+        private ConnectDB cdb;
+        private SqlConnection cnn;
         public DoiTac(ConnectDB cdb, SqlConnection cnn)
         {
             InitializeComponent();
@@ -34,10 +34,10 @@ namespace HQTCSDL_DATH2
             DataSet data = new DataSet();
             
             string query = "EXEC SP_KiemTraDoiTac @MST =" + MST_textbox.Text;
-            cnn.Open();
+            this.cnn.Open();
             SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
             adt.Fill(data);
-            cnn.Close();
+            this.cnn.Close();
 
 
             return data;
