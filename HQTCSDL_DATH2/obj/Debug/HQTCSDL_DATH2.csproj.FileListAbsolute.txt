@@ -27,3 +27,29 @@ D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.exe
 D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.pdb
 D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\bin\Debug\HQTCSDL_DATH2.pdb
 D:\Visual Studio\HQTCSDL_DATH2\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.SuggestedBindingRedirects.cache
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.Admin.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.Admin_QL.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.ConnectDB.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.DoiTac.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.DoiTac_DK.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.DoiTac_LHD.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.DoiTac_QLDH.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.DoiTac_QLSP.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.Interface.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.KhachHang_DH.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.KhachHang.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.KhachHang_DK.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.KhachHang_DT.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.KhachHang_XDH.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.NhanVien.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.Properties.Resources.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.TaiXe.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.TaiXe_DoanhThu.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.TaiXe_DK.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.TaiXe_TNDH.resources
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.GenerateResource.cache
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.exe
+C:\Users\ACER\OneDrive\Documents\GitHub\10-QLDCH\HQTCSDL_DATH2\obj\Debug\HQTCSDL_DATH2.pdb
