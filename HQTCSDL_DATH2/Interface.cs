@@ -22,6 +22,8 @@ namespace HQTCSDL_DATH2
 
         public Interface(ConnectDB cdb, SqlConnection cnn)
         {
+            this.cnn = cnn;
+            this.cdb = cdb;
             this.firstForm = cdb;
             InitializeComponent();
             this.Closing += Interface_Closing;

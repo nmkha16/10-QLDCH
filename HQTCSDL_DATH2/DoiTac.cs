@@ -32,15 +32,21 @@ namespace HQTCSDL_DATH2
         DataSet KiemTraDoiTac()
         {
             DataSet data = new DataSet();
-            
-            string query = "EXEC SP_KiemTraDoiTac @MST =" + MST_textbox.Text;
-            cnn.Open();
-            SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
-            adt.Fill(data);
-            cnn.Close();
-
-
+            if (MST_textbox.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập Mã Số Thuế");
+                this.Hide();
+                DoiTac DT1 = new DoiTac(cdb, cnn);
+                DT1.ShowDialog();
+            }
+            else
+            {
+                string query = "EXEC SP_KiemTraDoiTac @MST =" + MST_textbox.Text;
+                SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
+                adt.Fill(data);
+            }
             return data;
+
 
         }
 

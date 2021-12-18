@@ -17,7 +17,7 @@ namespace HQTCSDL_DATH2
         {
 
             InitializeComponent();
-            
+            sv_name.Text = "PIKACHU\\PIKACHU";
             db_name.Text = "QLDatVaChuyenHang";
         }
 
