@@ -14,6 +14,8 @@ namespace HQTCSDL_DATH2
     public partial class Interface : Form
     {
         private ConnectDB firstForm;
+        ConnectDB cdb;
+        SqlConnection cnn;
         public Interface() {
             InitializeComponent();
         }
@@ -23,12 +25,12 @@ namespace HQTCSDL_DATH2
             this.firstForm = cdb;
             InitializeComponent();
             this.Closing += Interface_Closing;
-            comboBox1.DisplayMember = "Text";
-            comboBox1.ValueMember = "Value";
-            comboBox1.Items.Add(new { Text = "Đối tác", Value = "Đối tác" });
-            comboBox1.Items.Add(new { Text = "Khách hàng", Value = "Khách hàng" });
-            comboBox1.Items.Add(new { Text = "Tài xế", Value = "Nhân viên" });
-            comboBox1.Items.Add(new { Text = "Quản trị", Value = "Quản trị" });
+            Role_box.DisplayMember = "Text";
+            Role_box.ValueMember = "Value";
+            Role_box.Items.Add(new { Text = "Đối tác", Value = "Đối tác" });
+            Role_box.Items.Add(new { Text = "Khách hàng", Value = "Khách hàng" });
+            Role_box.Items.Add(new { Text = "Tài xế", Value = "Nhân viên" });
+            Role_box.Items.Add(new { Text = "Quản trị", Value = "Quản trị" });
         }
 
         private void Interface_Closing(object sender, CancelEventArgs e)
@@ -43,6 +45,9 @@ namespace HQTCSDL_DATH2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DoiTac DT1 = new DoiTac(cdb, cnn);
+            this.Hide();
+            DT1.ShowDialog();
 
         }
 
@@ -51,13 +56,13 @@ namespace HQTCSDL_DATH2
          */ 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string curItem = (this.comboBox1.SelectedItem as dynamic).Value;
+            string curItem = (this.Role_box.SelectedItem as dynamic).Value;
             if (curItem == "Khách hàng" || curItem == "Tài xế" || curItem == "Đối tác")
             {
-                this.textBox1.Enabled = false;
-                this.textBox2.Enabled = false;
+                this.ID_box.Enabled = false;
+                this.Password_box.Enabled = false;
             }
-            else { this.textBox1.Enabled = true; this.textBox2.Enabled = true; }
+            else { this.ID_box.Enabled = true; this.Password_box.Enabled = true; }
 
         }
 
@@ -84,6 +89,12 @@ namespace HQTCSDL_DATH2
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            this.firstForm.Show();
         }
     }
 }
