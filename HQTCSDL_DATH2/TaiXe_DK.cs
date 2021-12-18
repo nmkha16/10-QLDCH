@@ -56,7 +56,7 @@ namespace HQTCSDL_DATH2
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Đăng ký không thành công");
                 }
             }
         }
@@ -67,6 +67,11 @@ namespace HQTCSDL_DATH2
             TaiXe taixe = new TaiXe();  
             taixe.ShowDialog();
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            command.CommandText = "Select TaiXe.KhuVucDangKy from TaiXe";
         }
     }
 }

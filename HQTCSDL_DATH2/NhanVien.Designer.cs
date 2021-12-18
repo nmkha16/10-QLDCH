@@ -1,4 +1,6 @@
-﻿namespace HQTCSDL_DATH2
+﻿using System;
+
+namespace HQTCSDL_DATH2
 {
     partial class NhanVien
     {
@@ -109,6 +111,11 @@
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label label1;
@@ -116,5 +123,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
+        private EventHandler button1_Click;
     }
 }
