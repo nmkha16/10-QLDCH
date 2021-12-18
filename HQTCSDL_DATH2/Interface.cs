@@ -47,9 +47,13 @@ namespace HQTCSDL_DATH2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DoiTac DT1 = new DoiTac(this.cdb, this.cnn);
-            this.Hide();
-            DT1.ShowDialog();
+            string curItem = (this.Role_box.SelectedItem as dynamic).Value;
+            if (curItem == "Đối tác")
+            {
+                DoiTac DT1 = new DoiTac(this, this.cnn);
+                this.Hide();
+                DT1.ShowDialog();
+            }
 
         }
 

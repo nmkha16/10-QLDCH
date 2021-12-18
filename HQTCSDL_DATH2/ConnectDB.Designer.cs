@@ -52,7 +52,6 @@
             this.sv_name.Name = "sv_name";
             this.sv_name.Size = new System.Drawing.Size(146, 20);
             this.sv_name.TabIndex = 1;
-            this.sv_name.Text = "PIKACHU\\PIKACHU";
             this.sv_name.TextChanged += new System.EventHandler(this.sv_name_TextChanged);
             // 
             // db_name
