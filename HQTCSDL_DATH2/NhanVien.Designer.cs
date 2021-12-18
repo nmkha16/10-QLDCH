@@ -1,9 +1,22 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
 namespace HQTCSDL_DATH2
 {
     partial class NhanVien
     {
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        string str = @"Data Source=(local);Initial Catalog=QLDatVaChuyenHang;Integrated Security=True";
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -33,7 +46,7 @@ namespace HQTCSDL_DATH2
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbactive = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +65,7 @@ namespace HQTCSDL_DATH2
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 84);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(501, 279);
@@ -68,29 +81,28 @@ namespace HQTCSDL_DATH2
             this.label2.TabIndex = 2;
             this.label2.Text = "Tình trạng kích hoạt";
             // 
-            // comboBox1
+            // cbactive
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbactive.FormattingEnabled = true;
+            this.cbactive.Items.AddRange(new object[] {
             "YES",
             "NO"});
-            this.comboBox1.Location = new System.Drawing.Point(257, 39);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(93, 24);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbactive.Location = new System.Drawing.Point(257, 39);
+            this.cbactive.Margin = new System.Windows.Forms.Padding(4);
+            this.cbactive.Name = "cbactive";
+            this.cbactive.Size = new System.Drawing.Size(93, 24);
+            this.cbactive.TabIndex = 3;
+            this.cbactive.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(376, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 4;
             this.button1.Text = "Duyệt";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NhanVien
             // 
@@ -98,11 +110,11 @@ namespace HQTCSDL_DATH2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 378);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbactive);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhanVien";
             this.Text = "NhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -113,7 +125,25 @@ namespace HQTCSDL_DATH2
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(str))
+            {
+                try
+                {
+                    string query = "select NHANVIEN.TinhTrang from NHANVIEN";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    conn.Open();
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "TaiXe");
+                    cbactive.DisplayMember = "TinhTrang";
+                    cbactive.ValueMember = "TinhTrang";
+                    cbactive.DataSource = ds.Tables["NHANVIEN"];
+                }
+                catch (Exception ex)
+                {
+                    // write exception info to log or anything else
+                    MessageBox.Show("Error occured!");
+                }
+            }
         }
 
         #endregion
@@ -121,7 +151,7 @@ namespace HQTCSDL_DATH2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbactive;
         private System.Windows.Forms.Button button1;
         private EventHandler button1_Click;
     }
