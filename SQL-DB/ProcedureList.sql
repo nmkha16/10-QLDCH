@@ -58,11 +58,11 @@ END
 --ThemSanPham
 --DROP PROC SP_ThemSanPham
 GO 
-CREATE PROC SP_ThemSanPham(@MaChiNhanh int,  @MaDT int, @TenSanPham varchar(50), @PhiSanPham int) 
+CREATE PROC SP_ThemSanPham(@MaChiNhanh int,  @MaDT int, @TenSanPham varchar(50), @DonGia int) 
 AS
 BEGIN
-	INSERT INTO SANPHAM(MaChiNhanh, MaDT, TenSanPham, PhiSanPham)
-				VALUES (@MaChiNhanh, @MaDT, @TenSanPham, @PhiSanPham)
+	INSERT INTO SANPHAM(MaChiNhanh, MaDT, TenSanPham, DonGia)
+				VALUES (@MaChiNhanh, @MaDT, @TenSanPham, @DonGia)
 END
 
 
@@ -95,19 +95,6 @@ BEGIN
 	WHERE TinhTrangDonHang = 'DAGIAO'
 END
 
---SuaSanPham
---DROP PROC SP_SuaSanPham
-GO
-CREATE PROC SP_SuaSanPham(@MaSanPham int, @MaChiNhanh int, @MaDT int, @TenSanPham varchar(50), @PhiSanPham int)
-AS
-BEGIN
-	UPDATE SANPHAM
-	SET MaChiNhanh = @MaChiNhanh,
-		MaDT = @MaDT,
-		TenSanPham = @TenSanPham,
-		PhiSanPham = @PhiSanPham
-	WHERE MaSanPham = @MaSanPham
-END
 
 --DangKyChiNhanh
 CREATE PROCEDURE SP_DangKyChiNhanh(@MaChiNhanh int,@MaDT int,@DiaChi char (50))
@@ -126,10 +113,11 @@ BEGIN
 END
 GO
 --XoaSanPham
-CREATE PROCEDURE SP_XoaSanPham(@MaSanPham int,@MaChiNhanh int,@MaDT int)
+CREATE PROCEDURE SP_XoaSanPham(@MaSanPham int,@TenSP varchar(50))
 AS
 BEGIN
-	DELETE SANPHAM(MaSanPham,MaChiNhanh,MaDT)
+	DELETE from SANPHAM
+	where MaSanPham= @MaSanPham and TenSanPham = @TenSP
 END
 GO
 --CapNhatDonHang
