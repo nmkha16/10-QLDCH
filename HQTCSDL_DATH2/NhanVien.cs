@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace HQTCSDL_DATH2
 {
     public partial class NhanVien : Form
     {
+        private Interface itf;
+        private SqlConnection cnn;
         public NhanVien()
         {
             InitializeComponent();
         }
+        private void Interface_Closing(object sender, CancelEventArgs e)
+        {
+            this.itf.Show();
+        }
+
     }
 }

@@ -45,8 +45,6 @@ namespace HQTCSDL_DATH2
             this.cnn.Open();
             SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
             adt.Fill(data);
-            //this.cnn.Close();
-
             dataGridView4.DataSource = data.Tables[0];
             dataGridView4.AutoResizeColumns();
             dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;

@@ -35,6 +35,7 @@ namespace HQTCSDL_DATH2
             Role_box.Items.Add(new { Text = "Đối tác", Value = "Đối tác" });
             Role_box.Items.Add(new { Text = "Khách hàng", Value = "Khách hàng" });
             Role_box.Items.Add(new { Text = "Tài xế", Value = "Tài xế" });
+            Role_box.Items.Add(new { Text = "Nhân viên", Value = "Nhân viên" });
             Role_box.Items.Add(new { Text = "Quản trị", Value = "Quản trị" });
         }
 
@@ -63,9 +64,19 @@ namespace HQTCSDL_DATH2
                 this.Hide();
                 KH.Show();
             }
-
+            if (curItem == "Tài xế")
+            {
+                TaiXe TX = new TaiXe();
+                this.Hide();
+                TX.Show();
+            }
+            if (curItem == "Nhân viên")
+            {
+                NhanVien nv = new NhanVien();
+                this.Hide();
+                nv.Show();
+            }
         }
-
         /*
          *Tắt 2 input box khi chọn role phù hợp 
          */ 
