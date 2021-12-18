@@ -46,6 +46,9 @@ namespace HQTCSDL_DATH2
 
         }
 
+        /*
+         *Tắt 2 input box khi chọn role phù hợp 
+         */ 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string curItem = (this.comboBox1.SelectedItem as dynamic).Value;
