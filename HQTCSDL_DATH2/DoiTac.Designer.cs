@@ -34,7 +34,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LapHD_btn = new System.Windows.Forms.Button();
             this.validate_btn = new System.Windows.Forms.Button();
             this.MST_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.LapHD_btn);
             this.panel2.Controls.Add(this.validate_btn);
             this.panel2.Controls.Add(this.MST_textbox);
             this.panel2.Controls.Add(this.label1);
@@ -104,14 +104,15 @@
             this.button2.Text = "Quản lý đơn hàng";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // LapHD_btn
             // 
-            this.button1.Location = new System.Drawing.Point(12, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Lập hợp đồng";
-            this.button1.UseVisualStyleBackColor = true;
+            this.LapHD_btn.Location = new System.Drawing.Point(12, 159);
+            this.LapHD_btn.Name = "LapHD_btn";
+            this.LapHD_btn.Size = new System.Drawing.Size(75, 41);
+            this.LapHD_btn.TabIndex = 4;
+            this.LapHD_btn.Text = "Lập hợp đồng";
+            this.LapHD_btn.UseVisualStyleBackColor = true;
+            this.LapHD_btn.Click += new System.EventHandler(this.LapHD_btn_Click);
             // 
             // validate_btn
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DoiTac";
             this.Text = "DoiTac";
+            this.Load += new System.EventHandler(this.DoiTac_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -183,7 +185,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LapHD_btn;
         private System.Windows.Forms.Button validate_btn;
         private System.Windows.Forms.TextBox MST_textbox;
         private System.Windows.Forms.Label label1;
