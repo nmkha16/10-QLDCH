@@ -71,6 +71,7 @@ namespace HQTCSDL_DATH2
         private void LapHD_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
+
             DoiTac_LHD LHD = new DoiTac_LHD(this, cnn);
             LHD.ShowDialog();
         }
