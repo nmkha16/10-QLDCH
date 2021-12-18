@@ -50,8 +50,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sv_name.Location = new System.Drawing.Point(90, 13);
             this.sv_name.Name = "sv_name";
-            this.sv_name.Size = new System.Drawing.Size(131, 20);
+            this.sv_name.Size = new System.Drawing.Size(146, 20);
             this.sv_name.TabIndex = 1;
+            this.sv_name.Text = "PIKACHU\\PIKACHU";
+            this.sv_name.TextChanged += new System.EventHandler(this.sv_name_TextChanged);
             // 
             // db_name
             // 
@@ -59,7 +61,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.db_name.Location = new System.Drawing.Point(90, 39);
             this.db_name.Name = "db_name";
-            this.db_name.Size = new System.Drawing.Size(131, 20);
+            this.db_name.Size = new System.Drawing.Size(146, 20);
             this.db_name.TabIndex = 3;
             // 
             // label2
@@ -75,9 +77,9 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(129, 65);
+            this.button1.Location = new System.Drawing.Point(242, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.Size = new System.Drawing.Size(65, 46);
             this.button1.TabIndex = 8;
             this.button1.Text = "Connect";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 106);
+            this.ClientSize = new System.Drawing.Size(319, 72);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.db_name);
             this.Controls.Add(this.label2);

@@ -138,6 +138,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDatVaChuyenHangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDatVaChuyenHangDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TaiXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +242,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLDatVaChuyenHangDataSet.xsc">
+      <DependentUpon>QLDatVaChuyenHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDatVaChuyenHangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDatVaChuyenHangDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDatVaChuyenHangDataSet.xss">
+      <DependentUpon>QLDatVaChuyenHangDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

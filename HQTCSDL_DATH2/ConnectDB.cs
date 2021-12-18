@@ -17,7 +17,7 @@ namespace HQTCSDL_DATH2
         {
 
             InitializeComponent();
-            sv_name.Text = "NMKHA";
+            
             db_name.Text = "QLDatVaChuyenHang";
         }
 
@@ -46,6 +46,11 @@ namespace HQTCSDL_DATH2
             {// do nothing }
 
             }
+        }
+
+        private void sv_name_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
