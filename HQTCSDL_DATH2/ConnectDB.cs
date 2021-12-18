@@ -17,6 +17,7 @@ namespace HQTCSDL_DATH2
         {
 
             InitializeComponent();
+            sv_name.Text = "NMKHA";
             db_name.Text = "QLDatVaChuyenHang";
         }
 
@@ -35,9 +36,11 @@ namespace HQTCSDL_DATH2
                 //this.Hide();
                 MessageBox.Show("Connected");
                 // open new form Interface()
-                Interface interface1 = new Interface();
-                interface1.ShowDialog();
-                cnn.Close();
+                this.Hide();
+                Interface interface1 = new Interface(this,cnn);
+                interface1.Show();
+                
+                //cnn.Close();
             }
             catch
             {// do nothing }
