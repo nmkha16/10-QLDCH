@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,34 @@ namespace HQTCSDL_DATH2
 {
     public partial class Interface : Form
     {
-        public Interface()
-        {
+        //private ConnectDB firstForm;
+        private ConnectDB cdb;
+        private SqlConnection cnn;
+        public Interface() {
             InitializeComponent();
+        }
+
+        public Interface(ConnectDB cdb, SqlConnection cnn)
+        {
+            // set variable before passing
+            this.cdb = cdb;
+            this.cnn = cnn;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            InitializeComponent();
+            this.Closing += Interface_Closing;
+            Role_box.DisplayMember = "Text";
+            Role_box.ValueMember = "Value";
+            Role_box.Items.Add(new { Text = "Đối tác", Value = "Đối tác" });
+            Role_box.Items.Add(new { Text = "Khách hàng", Value = "Khách hàng" });
+            Role_box.Items.Add(new { Text = "Tài xế", Value = "Nhân viên" });
+            Role_box.Items.Add(new { Text = "Quản trị", Value = "Quản trị" });
+        }
+
+        private void Interface_Closing(object sender, CancelEventArgs e)
+        {
+            this.cdb.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,11 +50,34 @@ namespace HQTCSDL_DATH2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string curItem = (this.Role_box.SelectedItem as dynamic).Value;
+            if (curItem == "Đối tác")
+            {
+                DoiTac DT1 = new DoiTac(this, this.cnn);
+                this.Hide();
+                DT1.ShowDialog();
+            }
+            if (curItem == "Khách hàng")
+            {
+                KhachHang KH = new KhachHang(this, this.cnn);
+                this.Hide();
+                KH.Show();
+            }
 
         }
 
+        /*
+         *Tắt 2 input box khi chọn role phù hợp 
+         */ 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string curItem = (this.Role_box.SelectedItem as dynamic).Value;
+            if (curItem == "Khách hàng" || curItem == "Tài xế" || curItem == "Đối tác")
+            {
+                this.ID_box.Enabled = false;
+                this.Password_box.Enabled = false;
+            }
+            else { this.ID_box.Enabled = true; this.Password_box.Enabled = true; }
 
         }
 
@@ -55,6 +104,12 @@ namespace HQTCSDL_DATH2
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            this.cdb.Show();
         }
     }
 }
