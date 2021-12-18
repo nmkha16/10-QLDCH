@@ -34,7 +34,7 @@ namespace HQTCSDL_DATH2
             Role_box.ValueMember = "Value";
             Role_box.Items.Add(new { Text = "Đối tác", Value = "Đối tác" });
             Role_box.Items.Add(new { Text = "Khách hàng", Value = "Khách hàng" });
-            Role_box.Items.Add(new { Text = "Tài xế", Value = "Nhân viên" });
+            Role_box.Items.Add(new { Text = "Tài xế", Value = "Tài xế" });
             Role_box.Items.Add(new { Text = "Quản trị", Value = "Quản trị" });
         }
 
