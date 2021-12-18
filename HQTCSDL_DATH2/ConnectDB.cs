@@ -17,7 +17,8 @@ namespace HQTCSDL_DATH2
         {
 
             InitializeComponent();
-            sv_name.Text = "PIKACHU\\PIKACHU";
+            // set text over here to to debug
+            sv_name.Text = "NMKHA";
             db_name.Text = "QLDatVaChuyenHang";
         }
 
@@ -32,7 +33,7 @@ namespace HQTCSDL_DATH2
             try
             {
                 cnn = new SqlConnection(connectionString);
-                cnn.Open();
+                //cnn.Open();
                 //this.Hide();
                 MessageBox.Show("Connected");
                 // open new form Interface()
@@ -40,7 +41,7 @@ namespace HQTCSDL_DATH2
                 Interface interface1 = new Interface(this,cnn);
                 interface1.Show();
                 
-                //cnn.Close();
+                
             }
             catch
             {// do nothing }
