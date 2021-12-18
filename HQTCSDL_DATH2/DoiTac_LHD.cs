@@ -47,7 +47,37 @@ namespace HQTCSDL_DATH2
             this.dt.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TaoHD_btn_Click(object sender, EventArgs e)
+        {
+            this.cnn.Open();
+            string NDD = DoiTac_LHD_NDD.Text;
+            string TTKH = DoiTac_LHP_TTKH.Text;
+            string PHH = DoiTac_LHD_PHH.Text;
+            int PHH1 = Int16.Parse(PHH);
+            string NHH = DoiTac_LHD_NHH.Text;
+            //DateTime NHH1 = DateTime.Parse(NHH);
+            string PTHH = DoiTac_LHD_PTHH.Text;
+            int PTHH1 = Int16.Parse(PTHH);
+
+            SqlCommand sc = new SqlCommand("EXEC SP_TaoHopDong '" + NDD + "','" + TTKH + "'," + PHH1 + ",'" + NHH + "'," + PTHH1, cnn);
+            sc.ExecuteNonQuery();
+            MessageBox.Show("Lập hóa đơn thành công!!");
+            this.cnn.Close();
+
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
         {
 
         }
