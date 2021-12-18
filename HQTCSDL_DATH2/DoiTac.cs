@@ -26,7 +26,6 @@ namespace HQTCSDL_DATH2
 
         private void Interface_Closing(object sender, CancelEventArgs e)
         {
-            this.Close();
             this.itf.Show();
         }
 
