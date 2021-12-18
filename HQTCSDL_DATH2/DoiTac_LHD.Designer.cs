@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DoiTac_LHD_NHH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Back_btn = new System.Windows.Forms.Button();
+            this.TaoHD_btn = new System.Windows.Forms.Button();
+            this.DoiTac_LHD_PHH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DoiTac_LHP_SCN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DoiTac_LHD_NDD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DoiTac_LHD_MST = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox5
+            // DoiTac_LHD_NHH
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DoiTac_LHD_NHH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(91, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 20);
-            this.textBox5.TabIndex = 40;
+            this.DoiTac_LHD_NHH.Location = new System.Drawing.Point(91, 116);
+            this.DoiTac_LHD_NHH.Name = "DoiTac_LHD_NHH";
+            this.DoiTac_LHD_NHH.Size = new System.Drawing.Size(274, 20);
+            this.DoiTac_LHD_NHH.TabIndex = 40;
             // 
             // label5
             // 
@@ -64,33 +64,35 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Ngày hết hạn";
             // 
-            // button2
+            // Back_btn
             // 
-            this.button2.Location = new System.Drawing.Point(91, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "Huỷ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Back_btn.Location = new System.Drawing.Point(9, 142);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(75, 23);
+            this.Back_btn.TabIndex = 38;
+            this.Back_btn.Text = "Trở về";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // button1
+            // TaoHD_btn
             // 
-            this.button1.Location = new System.Drawing.Point(242, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Tạo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.TaoHD_btn.Location = new System.Drawing.Point(183, 142);
+            this.TaoHD_btn.Name = "TaoHD_btn";
+            this.TaoHD_btn.Size = new System.Drawing.Size(91, 23);
+            this.TaoHD_btn.TabIndex = 37;
+            this.TaoHD_btn.Text = "Tạo hợp đồng";
+            this.TaoHD_btn.UseVisualStyleBackColor = true;
+            this.TaoHD_btn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // DoiTac_LHD_PHH
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DoiTac_LHD_PHH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(91, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 20);
-            this.textBox4.TabIndex = 36;
+            this.DoiTac_LHD_PHH.Location = new System.Drawing.Point(91, 90);
+            this.DoiTac_LHD_PHH.Name = "DoiTac_LHD_PHH";
+            this.DoiTac_LHD_PHH.Size = new System.Drawing.Size(274, 20);
+            this.DoiTac_LHD_PHH.TabIndex = 36;
             // 
             // label4
             // 
@@ -104,15 +106,15 @@
             this.label4.TabIndex = 35;
             this.label4.Text = "Phí hoa hồng";
             // 
-            // textBox3
+            // DoiTac_LHP_SCN
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DoiTac_LHP_SCN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(91, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 20);
-            this.textBox3.TabIndex = 34;
+            this.DoiTac_LHP_SCN.Location = new System.Drawing.Point(91, 64);
+            this.DoiTac_LHP_SCN.Name = "DoiTac_LHP_SCN";
+            this.DoiTac_LHP_SCN.Size = new System.Drawing.Size(274, 20);
+            this.DoiTac_LHP_SCN.TabIndex = 34;
             // 
             // label3
             // 
@@ -126,15 +128,15 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Số chi nhánh đk";
             // 
-            // textBox2
+            // DoiTac_LHD_NDD
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DoiTac_LHD_NDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(91, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 20);
-            this.textBox2.TabIndex = 32;
+            this.DoiTac_LHD_NDD.Location = new System.Drawing.Point(91, 38);
+            this.DoiTac_LHD_NDD.Name = "DoiTac_LHD_NDD";
+            this.DoiTac_LHD_NDD.Size = new System.Drawing.Size(274, 20);
+            this.DoiTac_LHD_NDD.TabIndex = 32;
             // 
             // label2
             // 
@@ -148,15 +150,15 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Người đại diện";
             // 
-            // textBox1
+            // DoiTac_LHD_MST
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DoiTac_LHD_MST.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(91, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 20);
-            this.textBox1.TabIndex = 30;
+            this.DoiTac_LHD_MST.Location = new System.Drawing.Point(91, 12);
+            this.DoiTac_LHD_MST.Name = "DoiTac_LHD_MST";
+            this.DoiTac_LHD_MST.Size = new System.Drawing.Size(274, 20);
+            this.DoiTac_LHD_MST.TabIndex = 30;
             // 
             // label1
             // 
@@ -175,18 +177,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 173);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(378, 229);
+            this.Controls.Add(this.DoiTac_LHD_NHH);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Back_btn);
+            this.Controls.Add(this.TaoHD_btn);
+            this.Controls.Add(this.DoiTac_LHD_PHH);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.DoiTac_LHP_SCN);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DoiTac_LHD_NDD);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DoiTac_LHD_MST);
             this.Controls.Add(this.label1);
             this.Name = "DoiTac_LHD";
             this.Text = "DoiTac_LHD";
@@ -196,17 +198,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox DoiTac_LHD_NHH;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button Back_btn;
+        private System.Windows.Forms.Button TaoHD_btn;
+        private System.Windows.Forms.TextBox DoiTac_LHD_PHH;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox DoiTac_LHP_SCN;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox DoiTac_LHD_NDD;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DoiTac_LHD_MST;
         private System.Windows.Forms.Label label1;
     }
 }

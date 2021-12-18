@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LapHD_btn = new System.Windows.Forms.Button();
             this.validate_btn = new System.Windows.Forms.Button();
             this.MST_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.signup_btn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.qLDatVaChuyenHangDataSet = new HQTCSDL_DATH2.QLDatVaChuyenHangDataSet();
             this.qLDatVaChuyenHangDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.LapHD_btn);
             this.panel2.Controls.Add(this.validate_btn);
             this.panel2.Controls.Add(this.MST_textbox);
             this.panel2.Controls.Add(this.label1);
@@ -75,10 +75,19 @@
             this.panel2.Size = new System.Drawing.Size(586, 275);
             this.panel2.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 59);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(549, 63);
+            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(104, 131);
+            this.button3.Location = new System.Drawing.Point(103, 159);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 41);
             this.button3.TabIndex = 6;
@@ -88,21 +97,22 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(199, 131);
+            this.button2.Location = new System.Drawing.Point(202, 159);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 41);
             this.button2.TabIndex = 5;
             this.button2.Text = "Quản lý đơn hàng";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // LapHD_btn
             // 
-            this.button1.Location = new System.Drawing.Point(12, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Lập hợp đồng";
-            this.button1.UseVisualStyleBackColor = true;
+            this.LapHD_btn.Location = new System.Drawing.Point(12, 159);
+            this.LapHD_btn.Name = "LapHD_btn";
+            this.LapHD_btn.Size = new System.Drawing.Size(75, 41);
+            this.LapHD_btn.TabIndex = 4;
+            this.LapHD_btn.Text = "Lập hợp đồng";
+            this.LapHD_btn.UseVisualStyleBackColor = true;
+            this.LapHD_btn.Click += new System.EventHandler(this.LapHD_btn_Click);
             // 
             // validate_btn
             // 
@@ -133,21 +143,12 @@
             // 
             // signup_btn
             // 
-            this.signup_btn.Location = new System.Drawing.Point(291, 131);
+            this.signup_btn.Location = new System.Drawing.Point(299, 159);
             this.signup_btn.Name = "signup_btn";
             this.signup_btn.Size = new System.Drawing.Size(75, 41);
             this.signup_btn.TabIndex = 0;
             this.signup_btn.Text = "Đăng ký";
             this.signup_btn.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(549, 43);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // qLDatVaChuyenHangDataSet
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DoiTac";
             this.Text = "DoiTac";
+            this.Load += new System.EventHandler(this.DoiTac_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -183,7 +185,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LapHD_btn;
         private System.Windows.Forms.Button validate_btn;
         private System.Windows.Forms.TextBox MST_textbox;
         private System.Windows.Forms.Label label1;
