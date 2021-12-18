@@ -21,5 +21,13 @@ namespace HQTCSDL_DATH2
         {
 
         }
+
+        private void signup_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TaiXe_DK taixe = new TaiXe_DK();
+            taixe.ShowDialog();
+            this.Close();
+        }
     }
 }
