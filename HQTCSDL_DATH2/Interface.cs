@@ -13,16 +13,18 @@ namespace HQTCSDL_DATH2
 {
     public partial class Interface : Form
     {
-        private ConnectDB firstForm;
-        ConnectDB cdb;
-        SqlConnection cnn;
+        //private ConnectDB firstForm;
+        private ConnectDB cdb;
+        private SqlConnection cnn;
         public Interface() {
             InitializeComponent();
         }
 
         public Interface(ConnectDB cdb, SqlConnection cnn)
         {
-            this.firstForm = cdb;
+            // set variable before passing
+            this.cdb = cdb;
+            this.cnn = cnn;
             InitializeComponent();
             this.Closing += Interface_Closing;
             Role_box.DisplayMember = "Text";
@@ -35,7 +37,7 @@ namespace HQTCSDL_DATH2
 
         private void Interface_Closing(object sender, CancelEventArgs e)
         {
-            this.firstForm.Show();
+            this.cdb.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace HQTCSDL_DATH2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DoiTac DT1 = new DoiTac(cdb, cnn);
+            DoiTac DT1 = new DoiTac(this.cdb, this.cnn);
             this.Hide();
             DT1.ShowDialog();
 
@@ -94,7 +96,7 @@ namespace HQTCSDL_DATH2
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            this.firstForm.Show();
+            this.cdb.Show();
         }
     }
 }

@@ -32,7 +32,7 @@ namespace HQTCSDL_DATH2
             try
             {
                 cnn = new SqlConnection(connectionString);
-                cnn.Open();
+                //cnn.Open();
                 //this.Hide();
                 MessageBox.Show("Connected");
                 // open new form Interface()
@@ -40,7 +40,7 @@ namespace HQTCSDL_DATH2
                 Interface interface1 = new Interface(this,cnn);
                 interface1.Show();
                 
-                //cnn.Close();
+                
             }
             catch
             {// do nothing }
