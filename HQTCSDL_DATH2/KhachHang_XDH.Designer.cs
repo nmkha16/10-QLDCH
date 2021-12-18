@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tensanpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,10 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.madonhang_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensanpham_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +46,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tensanpham1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madonhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachigiaohang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phivanchuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -154,36 +146,19 @@
             this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madonhang_1,
-            this.tensanpham_1,
-            this.soluong,
-            this.dongia_1});
             this.dataGridView3.Location = new System.Drawing.Point(532, 36);
             this.dataGridView3.Name = "dataGridView3";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.Size = new System.Drawing.Size(381, 397);
             this.dataGridView3.TabIndex = 1;
-            // 
-            // madonhang_1
-            // 
-            this.madonhang_1.HeaderText = "Mã đơn hàng";
-            this.madonhang_1.Name = "madonhang_1";
-            // 
-            // tensanpham_1
-            // 
-            this.tensanpham_1.HeaderText = "Tên sản phẩm";
-            this.tensanpham_1.Name = "tensanpham_1";
-            // 
-            // soluong
-            // 
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            // 
-            // dongia_1
-            // 
-            this.dongia_1.HeaderText = "Đơn giá";
-            this.dongia_1.Name = "dongia_1";
             // 
             // dataGridView4
             // 
@@ -191,16 +166,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madonhang,
-            this.diachigiaohang,
-            this.phivanchuyen,
-            this.tongtien,
-            this.Column1,
-            this.Column2});
             this.dataGridView4.Location = new System.Drawing.Point(12, 36);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView4.Size = new System.Drawing.Size(505, 397);
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
@@ -255,36 +227,6 @@
             this.dongia1.HeaderText = "Đơn giá";
             this.dongia1.Name = "dongia1";
             // 
-            // madonhang
-            // 
-            this.madonhang.HeaderText = "Mã đơn hàng";
-            this.madonhang.Name = "madonhang";
-            // 
-            // diachigiaohang
-            // 
-            this.diachigiaohang.HeaderText = "Địa chỉ giao hàng";
-            this.diachigiaohang.Name = "diachigiaohang";
-            // 
-            // phivanchuyen
-            // 
-            this.phivanchuyen.HeaderText = "Phí vận chuyển";
-            this.phivanchuyen.Name = "phivanchuyen";
-            // 
-            // tongtien
-            // 
-            this.tongtien.HeaderText = "Tổng tiền";
-            this.tongtien.Name = "tongtien";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Hình thức thanh toán";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tình trạng";
-            this.Column2.Name = "Column2";
-            // 
             // KhachHang_XDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,15 +267,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madonhang_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tensanpham_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dongia_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madonhang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachigiaohang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phivanchuyen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

@@ -34,7 +34,9 @@ namespace HQTCSDL_DATH2
 
         private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.ift.Show();
+            if (status == true) { 
+                this.ift.Show();
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,6 +84,7 @@ namespace HQTCSDL_DATH2
                 while (reader.Read())
                 {
                     MessageBox.Show("Chào khách hàng " + reader[1].ToString());
+                    this.currentID = reader[0].ToString();
                     status = true;
                 }
             }
