@@ -13,17 +13,23 @@ namespace HQTCSDL_DATH2
 {
     public partial class DoiTac : Form
     {
-        private ConnectDB cdb;
+        private Interface itf;
         private SqlConnection cnn;
-        public DoiTac(ConnectDB cdb, SqlConnection cnn)
+        public DoiTac(Interface itf, SqlConnection cnn)
         {
             InitializeComponent();
+            this.Closing += Interface_Closing;
             this.cnn = cnn;
-            this.cdb = cdb;
+            this.itf = itf;
 
         }
 
-       
+        private void Interface_Closing(object sender, CancelEventArgs e)
+        {
+            this.Close();
+            this.itf.Show();
+        }
+
         private void validate_btn_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = KiemTraDoiTac().Tables[0];
