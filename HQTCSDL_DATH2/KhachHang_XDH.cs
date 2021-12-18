@@ -27,9 +27,9 @@ namespace HQTCSDL_DATH2
                         this.KH.getID();
             this.cnn.Open();
             SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
-            adt.Fill(data);
+            adt.Fill(data,"out");
             //this.cnn.Close();
-            dataGridView4.DataSource = data;
+            dataGridView4.DataSource = data.Tables["out"];
             this.cnn.Close();
 
         }
