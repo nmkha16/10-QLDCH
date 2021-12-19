@@ -26,11 +26,39 @@ namespace HQTCSDL_DATH2
             this.ift = ift;
             this.cnn = cnn;
             this.FormClosing += KhachHang_FormClosing;
-            
+            textBox1.Text = "6594506166";
         }
 
         //method to get currentID
         public string getID() { return this.currentID; }
+        // method to get address
+        public string getAddr()
+        {
+            SqlCommand query = new SqlCommand("select diachi from khachhang where makhachhang =@id", cnn);
+            SqlParameter param = new SqlParameter("@id", this.getID());
+            query.Parameters.Add(param);
+            this.cnn.Open();
+            SqlDataReader reader = query.ExecuteReader();
+            //this.cnn.Close();
+            if (!reader.HasRows)
+            {
+                reader.Close();
+                this.cnn.Close();
+                return null;
+            }
+            else
+            {
+                while (reader.Read()) { 
+                    
+                    string result = reader[0].ToString();
+                    reader.Close();
+                    this.cnn.Close();
+                    return result;             
+                }
+            }
+            
+            return null;
+        }
 
         private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -100,6 +128,17 @@ namespace HQTCSDL_DATH2
                 this.Hide();
                 KhachHang_XDH xdh = new KhachHang_XDH(this, cnn);
                 xdh.Show();
+            }
+        }
+
+        // nút đặt hàng
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (status)
+            {
+                this.Hide();
+                KhachHang_DH dh = new KhachHang_DH(this, cnn);
+                dh.Show();
             }
         }
     }

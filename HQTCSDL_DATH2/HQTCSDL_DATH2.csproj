@@ -121,12 +121,6 @@
     <Compile Include="KhachHang_DK.Designer.cs">
       <DependentUpon>KhachHang_DK.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang_DT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhachHang_DT.Designer.cs">
-      <DependentUpon>KhachHang_DT.cs</DependentUpon>
-    </Compile>
     <Compile Include="KhachHang_XDH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang_DK.resx">
       <DependentUpon>KhachHang_DK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachHang_DT.resx">
-      <DependentUpon>KhachHang_DT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang_XDH.resx">
       <DependentUpon>KhachHang_XDH.cs</DependentUpon>
