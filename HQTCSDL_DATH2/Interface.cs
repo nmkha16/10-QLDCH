@@ -88,7 +88,10 @@ namespace HQTCSDL_DATH2
                 this.ID_box.Enabled = false;
                 this.Password_box.Enabled = false;
             }
-            else { this.ID_box.Enabled = true; this.Password_box.Enabled = true; }
+            else { 
+                this.ID_box.Enabled = true; this.Password_box.Enabled = true; 
+                
+            }
 
         }
 
