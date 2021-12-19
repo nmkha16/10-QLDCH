@@ -29,16 +29,15 @@ GO
 
 
 --DangKyDoiTac
---DROP PROC SP_DangKyDoiTa
+--DROP PROC SP_DangKyDoiTac
 GO
-CREATE PROC SP_DangKyDoiTac(@MaSoThue int, @TenDT varchar(50), @NguoiDaiDien varchar(50), @ThanhPho varchar(50), 
-							@Quan varchar(50), @SoChiNhanh int, @SoDonTrongNgay int, @LoaiVanChuyen char(20), @SDT char(10), @Email char(50))
+CREATE PROC SP_DangKyDoiTac(@MaSoThue int, @NguoiDaiDien varchar(50), @ThanhPho varchar(50), 
+							@Quan varchar(50), @SoChiNhanh int, @SoDonTrongNgay int, @Email char(50), @PTHH int)
 AS 
 BEGIN
-	INSERT INTO DOITAC (MaSoThue, TenDT, NguoiDaiDien, ThanhPho, Quan, SoChiNhanh, SoDonTrongNgay, LoaiVanChuyen, SDT, Email)
-				VALUES (@MaSoThue, @TenDT, @NguoiDaiDien, @ThanhPho, @Quan, @SoChiNhanh, @SoDonTrongNgay, @LoaiVanChuyen, @SDT, @Email)
+	INSERT INTO DOITAC (MaSoThue, NguoiDaiDien, ThanhPho, Quan, SoChiNhanh, SoDonTrongNgay, Email, PhanTramHoaHong)
+				VALUES (@MaSoThue, @NguoiDaiDien, @ThanhPho, @Quan, @SoChiNhanh, @SoDonTrongNgay, @Email, @PTHH)
 END
-
 
 --TaiKyHopDong
 --DROP PROC SP_TaiKyHopDong
@@ -145,3 +144,4 @@ BEGIN
 	WHERE MaHD = @MaHD
 END
 GO
+UPDATE DONHANG SET TinhTrangDonHang = 'TTDH_comboBox.Text' WHERE MaDonHang =  @MaDH

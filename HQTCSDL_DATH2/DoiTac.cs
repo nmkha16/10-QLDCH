@@ -15,7 +15,7 @@ namespace HQTCSDL_DATH2
     {
         private Interface itf;
         private SqlConnection cnn;
-        private DoiTac_LHD lhd;
+        //private DoiTac_LHD lhd;
         //private DoiTac dt;
         public DoiTac(Interface itf, SqlConnection cnn)
         {
@@ -79,6 +79,20 @@ namespace HQTCSDL_DATH2
         private void DoiTac_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DoiTac_QLDH QLDH = new DoiTac_QLDH(this, cnn);
+            QLDH.ShowDialog();
+        }
+
+        private void signup_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DoiTac_DK DK = new DoiTac_DK(this, cnn);
+            DK.ShowDialog();
         }
     }
 }

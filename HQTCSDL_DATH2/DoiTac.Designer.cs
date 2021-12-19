@@ -33,7 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.QLDB_btn = new System.Windows.Forms.Button();
             this.LapHD_btn = new System.Windows.Forms.Button();
             this.validate_btn = new System.Windows.Forms.Button();
             this.MST_textbox = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@
             // 
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.QLDB_btn);
             this.panel2.Controls.Add(this.LapHD_btn);
             this.panel2.Controls.Add(this.validate_btn);
             this.panel2.Controls.Add(this.MST_textbox);
@@ -94,15 +94,16 @@
             this.button3.Text = "Quản lý sản phẩm";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // QLDB_btn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(202, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 41);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Quản lý đơn hàng";
-            this.button2.UseVisualStyleBackColor = true;
+            this.QLDB_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLDB_btn.Location = new System.Drawing.Point(202, 159);
+            this.QLDB_btn.Name = "QLDB_btn";
+            this.QLDB_btn.Size = new System.Drawing.Size(75, 41);
+            this.QLDB_btn.TabIndex = 5;
+            this.QLDB_btn.Text = "Quản lý đơn hàng";
+            this.QLDB_btn.UseVisualStyleBackColor = true;
+            this.QLDB_btn.Click += new System.EventHandler(this.button2_Click);
             // 
             // LapHD_btn
             // 
@@ -149,6 +150,7 @@
             this.signup_btn.TabIndex = 0;
             this.signup_btn.Text = "Đăng ký";
             this.signup_btn.UseVisualStyleBackColor = true;
+            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
             // 
             // qLDatVaChuyenHangDataSet
             // 
@@ -184,7 +186,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button QLDB_btn;
         private System.Windows.Forms.Button LapHD_btn;
         private System.Windows.Forms.Button validate_btn;
         private System.Windows.Forms.TextBox MST_textbox;

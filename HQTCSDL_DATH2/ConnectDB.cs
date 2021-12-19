@@ -18,7 +18,7 @@ namespace HQTCSDL_DATH2
 
             InitializeComponent();
             // set text over here to to debug
-            sv_name.Text = "nmkha";
+            sv_name.Text = "PIKACHU\\PIKACHU";
             db_name.Text = "QLDatVaChuyenHang";
         }
 
