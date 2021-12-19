@@ -13,13 +13,17 @@ namespace HQTCSDL_DATH2
     public partial class TaiXe : Form
     {
         private Interface itf;
-        private SqlConnection cnn;
-        //private DoiTac dt;
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable tbTaiXe = new DataTable();
+        
+        string str = @"Data Source=(local);Initial Catalog=QLDatVaChuyenHang;Integrated Security=True";
+
         public TaiXe()
         {
             InitializeComponent();
         }
-
         private void Interface_Closing(object sender, CancelEventArgs e)
         {
             this.itf.Show();
@@ -52,6 +56,36 @@ namespace HQTCSDL_DATH2
             TaiXe_TNDH taixe = new TaiXe_TNDH();
             taixe.ShowDialog();
             this.Close();
+        }
+
+        private void TaiXe_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                connection = new SqlConnection(str);
+                connection.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            };
+        }
+
+        private void validate_btn_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select * from TaiXe Where TaiXe.CMND = @CMND";
+            command.CommandType = CommandType.Text;
+            command.Parameters.AddWithValue("@CMND", textBoxTaixe.Text);
+            adapter.SelectCommand = command;
+            tbTaiXe.Clear();
+            adapter.Fill(tbTaiXe);
+            dataGridView1.DataSource = tbTaiXe;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
