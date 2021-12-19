@@ -25,6 +25,9 @@ namespace HQTCSDL_DATH2
             // set variable before passing
             this.cdb = cdb;
             this.cnn = cnn;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             InitializeComponent();
             this.Closing += Interface_Closing;
             Role_box.DisplayMember = "Text";
@@ -53,6 +56,12 @@ namespace HQTCSDL_DATH2
                 DoiTac DT1 = new DoiTac(this, this.cnn);
                 this.Hide();
                 DT1.ShowDialog();
+            }
+            if (curItem == "Khách hàng")
+            {
+                KhachHang KH = new KhachHang(this, this.cnn);
+                this.Hide();
+                KH.Show();
             }
 
         }

@@ -52,7 +52,7 @@
             // login_btn
             // 
             this.login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.login_btn.Location = new System.Drawing.Point(133, 98);
+            this.login_btn.Location = new System.Drawing.Point(143, 98);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(70, 30);
             this.login_btn.TabIndex = 0;
@@ -86,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ID_box.Location = new System.Drawing.Point(99, 46);
             this.ID_box.Name = "ID_box";
-            this.ID_box.Size = new System.Drawing.Size(159, 20);
+            this.ID_box.Size = new System.Drawing.Size(169, 20);
             this.ID_box.TabIndex = 2;
             this.ID_box.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -97,7 +97,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Password_box.Location = new System.Drawing.Point(99, 72);
             this.Password_box.Name = "Password_box";
-            this.Password_box.Size = new System.Drawing.Size(159, 20);
+            this.Password_box.Size = new System.Drawing.Size(169, 20);
             this.Password_box.TabIndex = 3;
             this.Password_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -114,7 +114,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 139);
+            this.panel1.Size = new System.Drawing.Size(330, 149);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -134,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(320, 139);
+            this.ClientSize = new System.Drawing.Size(330, 149);
             this.Controls.Add(this.panel1);
             this.Name = "Interface";
             this.Text = "Interface";
