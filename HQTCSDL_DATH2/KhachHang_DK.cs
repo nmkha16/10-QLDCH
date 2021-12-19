@@ -22,10 +22,7 @@ namespace HQTCSDL_DATH2
             this.kh = kh;
             this.FormClosing += KhachHang_DK_FormClosing;
 
-        }
-
-        
-
+        }      
 
         private void KhachHang_DK_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -56,7 +53,7 @@ namespace HQTCSDL_DATH2
             try
             {
                 query.ExecuteNonQuery();
-                MessageBox.Show("Khách hàng "+textBox1 + " đăng ký thành công");
+                MessageBox.Show("Khách hàng "+textBox1.Text + " đăng ký thành công");
             }
             catch
             {
