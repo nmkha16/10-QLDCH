@@ -50,9 +50,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonkt = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbCMND = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tensanpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -145,7 +149,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(653, 11);
+            this.label3.Location = new System.Drawing.Point(672, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 29);
@@ -156,7 +160,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 11);
+            this.label4.Location = new System.Drawing.Point(78, 11);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(370, 29);
@@ -173,12 +177,12 @@
             this.tensanpham_1,
             this.soluong,
             this.dongia_1});
-            this.dataGridView3.Location = new System.Drawing.Point(515, 44);
+            this.dataGridView3.Location = new System.Drawing.Point(515, 114);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(500, 411);
+            this.dataGridView3.Size = new System.Drawing.Size(500, 341);
             this.dataGridView3.TabIndex = 1;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
@@ -193,12 +197,12 @@
             this.tongtien,
             this.diachigiaohang,
             this.phivanchuyen});
-            this.dataGridView4.Location = new System.Drawing.Point(13, 44);
+            this.dataGridView4.Location = new System.Drawing.Point(13, 114);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.Size = new System.Drawing.Size(484, 407);
+            this.dataGridView4.Size = new System.Drawing.Size(484, 337);
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
@@ -278,6 +282,10 @@
             // 
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.buttonkt);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.tbCMND);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
@@ -289,6 +297,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1028, 459);
             this.panel2.TabIndex = 5;
+            // 
+            // buttonkt
+            // 
+            this.buttonkt.Location = new System.Drawing.Point(345, 62);
+            this.buttonkt.Name = "buttonkt";
+            this.buttonkt.Size = new System.Drawing.Size(75, 23);
+            this.buttonkt.TabIndex = 8;
+            this.buttonkt.Text = "Kiểm tra";
+            this.buttonkt.UseVisualStyleBackColor = true;
+            this.buttonkt.Click += new System.EventHandler(this.buttonkt_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "CMND";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // tbCMND
+            // 
+            this.tbCMND.Location = new System.Drawing.Point(93, 62);
+            this.tbCMND.Name = "tbCMND";
+            this.tbCMND.Size = new System.Drawing.Size(230, 22);
+            this.tbCMND.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -316,6 +351,16 @@
             this.dongia.MinimumWidth = 6;
             this.dongia.Name = "dongia";
             this.dongia.Width = 125;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(426, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Quay lại";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TaiXe_TNDH
             // 
@@ -368,5 +413,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tensanpham;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbCMND;
+        private System.Windows.Forms.Button buttonkt;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -34,6 +34,9 @@
             this.phivanchuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tinhtranggiaohang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbCMND = new System.Windows.Forms.TextBox();
+            this.CMND = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhthu)).BeginInit();
@@ -51,13 +54,14 @@
             this.diachi,
             this.phivanchuyen,
             this.tinhtranggiaohang});
-            this.dataGridViewdoanhthu.Location = new System.Drawing.Point(16, 78);
-            this.dataGridViewdoanhthu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewdoanhthu.Location = new System.Drawing.Point(16, 114);
+            this.dataGridViewdoanhthu.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewdoanhthu.Name = "dataGridViewdoanhthu";
             this.dataGridViewdoanhthu.RowHeadersVisible = false;
             this.dataGridViewdoanhthu.RowHeadersWidth = 51;
-            this.dataGridViewdoanhthu.Size = new System.Drawing.Size(619, 300);
+            this.dataGridViewdoanhthu.Size = new System.Drawing.Size(619, 264);
             this.dataGridViewdoanhthu.TabIndex = 5;
+            this.dataGridViewdoanhthu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdoanhthu_CellContentClick);
             // 
             // madonhang_1
             // 
@@ -91,19 +95,48 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.tbCMND);
+            this.panel1.Controls.Add(this.CMND);
             this.panel1.Controls.Add(this.splitter1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(644, 384);
             this.panel1.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(438, 71);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Kiểm Tra";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbCMND
+            // 
+            this.tbCMND.Location = new System.Drawing.Point(127, 71);
+            this.tbCMND.Name = "tbCMND";
+            this.tbCMND.Size = new System.Drawing.Size(257, 22);
+            this.tbCMND.TabIndex = 6;
+            // 
+            // CMND
+            // 
+            this.CMND.AutoSize = true;
+            this.CMND.Location = new System.Drawing.Point(36, 71);
+            this.CMND.Name = "CMND";
+            this.CMND.Size = new System.Drawing.Size(47, 16);
+            this.CMND.TabIndex = 5;
+            this.CMND.Text = "CMND";
+            // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(4, 384);
             this.splitter1.TabIndex = 4;
@@ -130,7 +163,7 @@
             this.ClientSize = new System.Drawing.Size(644, 384);
             this.Controls.Add(this.dataGridViewdoanhthu);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaiXe_DoanhThu";
             this.Text = "TaiXeDoanhThu";
             this.Load += new System.EventHandler(this.TaiXe_DoanhThu_Load);
@@ -152,5 +185,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn phivanchuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn tinhtranggiaohang;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbCMND;
+        private System.Windows.Forms.Label CMND;
     }
 }

@@ -17,14 +17,13 @@ namespace HQTCSDL_DATH2
         SqlCommand command;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable tbTaiXe = new DataTable();
-
-        string str = @"Data Source=(local);Initial Catalog=QLDatVaChuyenHang;Integrated Security=True";
         
+        string str = @"Data Source=(local);Initial Catalog=QLDatVaChuyenHang;Integrated Security=True";
+
         public TaiXe()
         {
             InitializeComponent();
         }
-
         private void Interface_Closing(object sender, CancelEventArgs e)
         {
             this.itf.Show();
@@ -46,10 +45,9 @@ namespace HQTCSDL_DATH2
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TaiXe_DoanhThu taixe = new TaiXe_DoanhThu();
+            TaiXe_DoanhThu taixe = new TaiXe_DoanhThu(textBoxTaixe.Text);
             taixe.ShowDialog();
             this.Close();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,14 +56,6 @@ namespace HQTCSDL_DATH2
             TaiXe_TNDH taixe = new TaiXe_TNDH();
             taixe.ShowDialog();
             this.Close();
-            command = connection.CreateCommand();
-            command.CommandText = "select * from TaiXe Where TaiXe.CMND = @CMND";
-            command.CommandType = CommandType.Text;
-            command.Parameters.AddWithValue("@CMND", textBoxTaixe.Text);
-            adapter.SelectCommand = command;
-            tbTaiXe.Clear();
-            adapter.Fill(tbTaiXe);
-            dataGridView1.DataSource = tbTaiXe;
         }
 
         private void TaiXe_Load(object sender, EventArgs e)
@@ -91,6 +81,11 @@ namespace HQTCSDL_DATH2
             tbTaiXe.Clear();
             adapter.Fill(tbTaiXe);
             dataGridView1.DataSource = tbTaiXe;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
