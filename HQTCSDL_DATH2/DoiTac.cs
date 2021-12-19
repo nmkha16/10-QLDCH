@@ -87,5 +87,12 @@ namespace HQTCSDL_DATH2
             DoiTac_QLDH QLDH = new DoiTac_QLDH(this, cnn);
             QLDH.ShowDialog();
         }
+
+        private void signup_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DoiTac_DK DK = new DoiTac_DK(this, cnn);
+            DK.ShowDialog();
+        }
     }
 }

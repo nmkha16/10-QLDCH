@@ -15,7 +15,8 @@ namespace HQTCSDL_DATH2
     {
         private DoiTac dt;
         private SqlConnection cnn;
-        int MaDH = 0;
+        //private string TTDH;
+        private string MaDH;
         public DoiTac_QLDH(DoiTac dt, SqlConnection cnn)
         {
             InitializeComponent();
@@ -45,26 +46,19 @@ namespace HQTCSDL_DATH2
             TTDH_comboBox.Text = "";
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            MaDH = Convert.ToInt32(dataGridView_TTDH.Rows[e.RowIndex].Cells[0].Value.ToString());
-            //txt_Name.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[1].Value.ToString();
-            TTDH_comboBox.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[2].Value.ToString();
-        }
         private void Update_btn_Click(object sender, EventArgs e)
         {
             if (TTDH_comboBox.Text != "")
             {
-                //string TTDH = TTDH_comboBox.Text;
-               
-                SqlCommand cmd = new SqlCommand("UPDATE DONHANG SET TinhTrangDonHang = @TTDH, MaDonHang = @MaDH ", cnn);
+                string TinhTrang = TTDH_comboBox.Text;
+                SqlCommand cmd = new SqlCommand("UPDATE DONHANG SET TinhTrangDonHang = '" + TinhTrang + "' WHERE MaDonHang = " + @MaDH , cnn);
                 cnn.Open();
                 
-                cmd.Parameters.AddWithValue("@TTDH", TTDH_comboBox.Text);
-                //dataGridView_TTDH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                cmd.Parameters.AddWithValue("@MaDH", MaDH);
+               
                 cmd.ExecuteNonQuery();
                 cnn.Close();
-                MessageBox.Show("Record Updated Successfully");
+                MessageBox.Show("Updated Successfully");
                 DisplayData();
                 ClearData();
             }
@@ -73,6 +67,13 @@ namespace HQTCSDL_DATH2
                 MessageBox.Show("Hãy chọn tình trạng đơn hàng muốn cập nhật!!");
             }
 
+        }
+
+        private void dataGridView_TTDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MaDH = dataGridView_TTDH.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //txt_Name.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TTDH_comboBox.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

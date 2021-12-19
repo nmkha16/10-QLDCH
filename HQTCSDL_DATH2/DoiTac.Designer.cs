@@ -150,6 +150,7 @@
             this.signup_btn.TabIndex = 0;
             this.signup_btn.Text = "Đăng ký";
             this.signup_btn.UseVisualStyleBackColor = true;
+            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
             // 
             // qLDatVaChuyenHangDataSet
             // 

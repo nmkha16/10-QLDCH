@@ -145,3 +145,4 @@ BEGIN
 	WHERE MaHD = @MaHD
 END
 GO
+UPDATE DONHANG SET TinhTrangDonHang = 'TTDH_comboBox.Text' WHERE MaDonHang =  @MaDH

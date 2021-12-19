@@ -48,7 +48,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 306);
+            this.panel1.Size = new System.Drawing.Size(838, 306);
             this.panel1.TabIndex = 0;
             // 
             // TTDH_comboBox
@@ -88,14 +88,15 @@
             this.dataGridView_TTDH.Location = new System.Drawing.Point(12, 57);
             this.dataGridView_TTDH.Name = "dataGridView_TTDH";
             this.dataGridView_TTDH.RowHeadersVisible = false;
-            this.dataGridView_TTDH.Size = new System.Drawing.Size(677, 237);
+            this.dataGridView_TTDH.Size = new System.Drawing.Size(812, 237);
             this.dataGridView_TTDH.TabIndex = 1;
+            this.dataGridView_TTDH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_TTDH_CellContentClick);
             // 
             // DoiTac_QLDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 306);
+            this.ClientSize = new System.Drawing.Size(838, 306);
             this.Controls.Add(this.panel1);
             this.Name = "DoiTac_QLDH";
             this.Text = "DoiTac_QLDH";
