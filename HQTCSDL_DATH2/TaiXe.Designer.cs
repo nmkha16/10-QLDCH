@@ -48,70 +48,81 @@
             this.panel1.Controls.Add(this.signup_btn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 114);
+            this.panel1.Size = new System.Drawing.Size(469, 140);
             this.panel1.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(176, 45);
+            this.button2.Location = new System.Drawing.Point(235, 55);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "Doanh thu";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 45);
+            this.button1.Location = new System.Drawing.Point(117, 55);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 4;
             this.button1.Text = "Tiếp nhận";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // validate_btn
             // 
-            this.validate_btn.Location = new System.Drawing.Point(257, 19);
+            this.validate_btn.Location = new System.Drawing.Point(343, 23);
+            this.validate_btn.Margin = new System.Windows.Forms.Padding(4);
             this.validate_btn.Name = "validate_btn";
-            this.validate_btn.Size = new System.Drawing.Size(75, 20);
+            this.validate_btn.Size = new System.Drawing.Size(100, 25);
             this.validate_btn.TabIndex = 3;
             this.validate_btn.Text = "Kiểm tra";
             this.validate_btn.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 19);
+            this.textBox1.Location = new System.Drawing.Point(117, 23);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
+            this.textBox1.Size = new System.Drawing.Size(216, 22);
             this.textBox1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 22);
+            this.label1.Location = new System.Drawing.Point(57, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "CMND";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // signup_btn
             // 
-            this.signup_btn.Location = new System.Drawing.Point(257, 75);
+            this.signup_btn.Location = new System.Drawing.Point(343, 92);
+            this.signup_btn.Margin = new System.Windows.Forms.Padding(4);
             this.signup_btn.Name = "signup_btn";
-            this.signup_btn.Size = new System.Drawing.Size(75, 23);
+            this.signup_btn.Size = new System.Drawing.Size(100, 28);
             this.signup_btn.TabIndex = 0;
             this.signup_btn.Text = "Đăng ký";
             this.signup_btn.UseVisualStyleBackColor = true;
+            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
             // 
             // TaiXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 114);
+            this.ClientSize = new System.Drawing.Size(469, 140);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaiXe";
             this.Text = "TaiXe";
             this.panel1.ResumeLayout(false);
