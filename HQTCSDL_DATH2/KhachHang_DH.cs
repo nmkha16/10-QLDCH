@@ -43,7 +43,7 @@ namespace HQTCSDL_DATH2
             dataGridView3.AllowUserToResizeRows = false;
             //populate table
             dsDT = new DataSet();
-            string query = "select top 20 madt N'Mã đối tác', tendt N'Tên đối tác',thanhpho N'Thành phố',loaivanchuyen N'Loại vận chuyển', SDT N'Số điện thoại'," +
+            string query = "select madt N'Mã đối tác', tendt N'Tên đối tác',thanhpho N'Thành phố',loaivanchuyen N'Loại vận chuyển', SDT N'Số điện thoại'," +
                 "Email from doitac";
             this.cnn.Open();
             SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
