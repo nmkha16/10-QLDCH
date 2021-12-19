@@ -34,6 +34,7 @@ namespace HQTCSDL_DATH2
 
         private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             this.ift.Show();
         }
 
@@ -59,7 +60,9 @@ namespace HQTCSDL_DATH2
 
         private void signup_btn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            KhachHang_DK dk = new KhachHang_DK(this, cnn);
+            dk.Show();
         }
 
         // nút kiểm tra
@@ -82,6 +85,7 @@ namespace HQTCSDL_DATH2
                 while (reader.Read())
                 {
                     MessageBox.Show("Chào khách hàng " + reader[1].ToString());
+                    this.currentID = reader[0].ToString();
                     status = true;
                 }
             }
@@ -91,9 +95,12 @@ namespace HQTCSDL_DATH2
         // nút xem đơn hàng
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            KhachHang_XDH xdh = new KhachHang_XDH(this, cnn);
-            xdh.Show();
+            if (status)
+            {
+                this.Hide();
+                KhachHang_XDH xdh = new KhachHang_XDH(this, cnn);
+                xdh.Show();
+            }
         }
     }
 }
