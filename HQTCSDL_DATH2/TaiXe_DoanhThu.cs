@@ -61,5 +61,13 @@ namespace HQTCSDL_DATH2
                 MessageBox.Show(ex.Message);
             };
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TaiXe taixe = new TaiXe();
+            taixe.ShowDialog();
+            this.Close();
+        }
     }
 }

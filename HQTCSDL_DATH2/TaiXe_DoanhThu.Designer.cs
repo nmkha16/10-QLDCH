@@ -39,6 +39,7 @@
             this.CMND = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhthu)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tbCMND);
             this.panel1.Controls.Add(this.CMND);
@@ -156,6 +158,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Doanh thu các đơn đã giao";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(543, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Quay lại";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // TaiXe_DoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,5 +200,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbCMND;
         private System.Windows.Forms.Label CMND;
+        private System.Windows.Forms.Button button2;
     }
 }
