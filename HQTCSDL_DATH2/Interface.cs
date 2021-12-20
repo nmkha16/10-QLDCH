@@ -76,6 +76,23 @@ namespace HQTCSDL_DATH2
                 this.Hide();
                 nv.Show();
             }
+            if (curItem == "Quản trị")
+            {
+                
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM ADMINISTRATOR WHERE UserID ="
+                    + ID_box.Text.ToString() + " AND Password ='" + Password_box.Text + "'", cnn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    Admin_QL QL = new Admin_QL();
+                    this.Hide();
+                    QL.Show();
+                }
+                else
+                    MessageBox.Show("Invalid username or password");
+            }
         }
         /*
          *Tắt 2 input box khi chọn role phù hợp 
@@ -88,9 +105,9 @@ namespace HQTCSDL_DATH2
                 this.ID_box.Enabled = false;
                 this.Password_box.Enabled = false;
             }
-            else { 
-                this.ID_box.Enabled = true; this.Password_box.Enabled = true; 
-                
+            else {
+                this.ID_box.Enabled = true;
+                this.Password_box.Enabled = true;
             }
 
         }
