@@ -97,12 +97,6 @@
     <Compile Include="DoiTac_QLSP.Designer.cs">
       <DependentUpon>DoiTac_QLSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoiTac_ThemSP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoiTac_ThemSP.Designer.cs">
-      <DependentUpon>DoiTac_ThemSP.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoiTac_QLSP.resx">
       <DependentUpon>DoiTac_QLSP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoiTac_ThemSP.resx">
-      <DependentUpon>DoiTac_ThemSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface.resx">
       <DependentUpon>Interface.cs</DependentUpon>
