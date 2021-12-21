@@ -15,8 +15,7 @@ namespace HQTCSDL_DATH2
     {
         private DoiTac dt;
         private SqlConnection cnn;
-        //private string TTDH;
-        private string MaDH;
+        
         public DoiTac_QLDH(DoiTac dt, SqlConnection cnn)
         {
             InitializeComponent();
@@ -58,7 +57,7 @@ namespace HQTCSDL_DATH2
                
                 cmd.ExecuteNonQuery();
                 cnn.Close();
-                MessageBox.Show("Updated Successfully");
+                MessageBox.Show("Cập nhật tình trạng đơn hàng thành công!!");
                 DisplayData();
                 ClearData();
             }
@@ -71,9 +70,7 @@ namespace HQTCSDL_DATH2
 
         private void dataGridView_TTDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MaDH = dataGridView_TTDH.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //txt_Name.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[1].Value.ToString();
-            TTDH_comboBox.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[2].Value.ToString();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
