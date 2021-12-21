@@ -76,5 +76,13 @@ namespace HQTCSDL_DATH2
             adapter.Fill(tbmaDT);
             dataGridViewxemsp.DataSource = tbmaDT;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DoiTac_SuaSP SuaSP = new DoiTac_SuaSP();
+            SuaSP.ShowDialog();
+            this.Close();
+        }
     }
 }
