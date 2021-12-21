@@ -45,7 +45,7 @@ namespace HQTCSDL_DATH2
         DataSet KiemTraDoiTac()
         {
             DataSet data = new DataSet();  
-            string query = "EXEC SP_KiemTraDoiTac @MST =" + MST_textbox.Text;
+            string query = "select * from doitac where masothue ='" + MST_textbox.Text+"'";
 
             this.cnn.Open();
             SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
