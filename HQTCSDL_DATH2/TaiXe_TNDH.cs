@@ -80,7 +80,9 @@ namespace HQTCSDL_DATH2
                 connection = new SqlConnection(str);
                 connection.Open();
                 command = connection.CreateCommand();
-                command.CommandText = "select DH_SP.MaSanPham,DH_SP.TenSanPham,DH_SP.SoLuong, DH_SP.DonGia from DH_SP,TAIXE,DONHANG where DONHANG.MaDonHang=DH_SP.MaDonHang and DONHANG.MaTaiXe=TAIXE.MaTaiXe and TAIXE.CMND=@CMND";
+                command.CommandText = "select DH_SP.MaSanPham,DH_SP.TenSanPham,DH_SP.SoLuong, DH_SP.DonGia, DONHANG.PhiVanChuyen" +
+                    " from DH_SP,TAIXE,DONHANG"+
+                    " where DONHANG.MaDonHang=DH_SP.MaDonHang and DONHANG.MaTaiXe=TAIXE.MaTaiXe and TAIXE.CMND=@CMND";
                 command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("@CMND", tbCMND.Text);
                 adapter.SelectCommand = command;

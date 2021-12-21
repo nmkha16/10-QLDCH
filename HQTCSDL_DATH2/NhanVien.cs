@@ -55,7 +55,14 @@ namespace HQTCSDL_DATH2
         private void button1_Click_1(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "DECLARE @TinhTrangKichHoat_HopDong varchar(3) ; SET @TinhTrangKichHoat_HopDong = 'NO' ; IF @TinhTrangKichHoat_HopDong = 'NO' update HOPDONG set TinhTrangKichHoat = 'YES' where HOPDONG.MaDT = @MaDT Select HOPDONG.TinhTrangKichHoat from HOPDONG where HOPDONG.MaDT= @MaDT";
+            command.CommandText = "DECLARE @TinhTrangKichHoat_HopDong varchar(3)" +
+                " SET @TinhTrangKichHoat_HopDong = 'NO'"+
+                " IF @TinhTrangKichHoat_HopDong = 'NO'"+
+                "update HOPDONG set TinhTrangKichHoat = 'YES'"+
+                " where HOPDONG.MaDT = @MaDT"+
+                " Select HOPDONG.TinhTrangKichHoat "+
+                "from HOPDONG "+
+                "where HOPDONG.MaDT= @MaDT";
             command.CommandType = CommandType.Text;
             command.Parameters.AddWithValue("@MaDT", tbmadoitac.Text);
             adapter.SelectCommand = command;
