@@ -28,74 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewdoanhthu = new System.Windows.Forms.DataGridView();
-            this.madonhang_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phivanchuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtranggiaohang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tbCMND = new System.Windows.Forms.TextBox();
             this.CMND = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhthu)).BeginInit();
+            this.dataGridViewdoanhthu = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhthu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewdoanhthu
-            // 
-            this.dataGridViewdoanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewdoanhthu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewdoanhthu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madonhang_1,
-            this.diachi,
-            this.phivanchuyen,
-            this.tinhtranggiaohang});
-            this.dataGridViewdoanhthu.Location = new System.Drawing.Point(16, 114);
-            this.dataGridViewdoanhthu.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewdoanhthu.Name = "dataGridViewdoanhthu";
-            this.dataGridViewdoanhthu.RowHeadersVisible = false;
-            this.dataGridViewdoanhthu.RowHeadersWidth = 51;
-            this.dataGridViewdoanhthu.Size = new System.Drawing.Size(619, 264);
-            this.dataGridViewdoanhthu.TabIndex = 5;
-            this.dataGridViewdoanhthu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdoanhthu_CellContentClick);
-            // 
-            // madonhang_1
-            // 
-            this.madonhang_1.HeaderText = "Mã đơn hàng";
-            this.madonhang_1.MinimumWidth = 6;
-            this.madonhang_1.Name = "madonhang_1";
-            this.madonhang_1.Width = 125;
-            // 
-            // diachi
-            // 
-            this.diachi.HeaderText = "Địa chỉ giao hàng";
-            this.diachi.MinimumWidth = 6;
-            this.diachi.Name = "diachi";
-            this.diachi.Width = 125;
-            // 
-            // phivanchuyen
-            // 
-            this.phivanchuyen.HeaderText = "Phí vận chuyển";
-            this.phivanchuyen.MinimumWidth = 6;
-            this.phivanchuyen.Name = "phivanchuyen";
-            this.phivanchuyen.Width = 125;
-            // 
-            // tinhtranggiaohang
-            // 
-            this.tinhtranggiaohang.HeaderText = "Tình trạng giao hàng";
-            this.tinhtranggiaohang.MinimumWidth = 6;
-            this.tinhtranggiaohang.Name = "tinhtranggiaohang";
-            this.tinhtranggiaohang.Width = 125;
             // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.dataGridViewdoanhthu);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tbCMND);
@@ -108,6 +57,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(644, 384);
             this.panel1.TabIndex = 6;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(543, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Quay lại";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -158,48 +117,42 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Doanh thu các đơn đã giao";
             // 
-            // button2
+            // dataGridViewdoanhthu
             // 
-            this.button2.Location = new System.Drawing.Point(543, 70);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Quay lại";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.dataGridViewdoanhthu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewdoanhthu.Location = new System.Drawing.Point(39, 121);
+            this.dataGridViewdoanhthu.Name = "dataGridViewdoanhthu";
+            this.dataGridViewdoanhthu.RowHeadersWidth = 51;
+            this.dataGridViewdoanhthu.RowTemplate.Height = 24;
+            this.dataGridViewdoanhthu.Size = new System.Drawing.Size(579, 251);
+            this.dataGridViewdoanhthu.TabIndex = 9;
             // 
             // TaiXe_DoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 384);
-            this.Controls.Add(this.dataGridViewdoanhthu);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaiXe_DoanhThu";
             this.Text = "TaiXeDoanhThu";
             this.Load += new System.EventHandler(this.TaiXe_DoanhThu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhthu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoanhthu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridViewdoanhthu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madonhang_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phivanchuyen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtranggiaohang;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbCMND;
         private System.Windows.Forms.Label CMND;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridViewdoanhthu;
     }
 }

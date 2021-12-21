@@ -63,13 +63,15 @@ namespace HQTCSDL_DATH2
                 connection = new SqlConnection(str);
                 connection.Open();
                 command = connection.CreateCommand();
-                command.CommandText = "select DONHANG.MaDonHang, TAIXE.SDT, DONHANG.TongTien, DONHANG.DiaChiGiaoHang from DONHANG,TAIXE where TAIXE.CMND = @CMND and TAIXE.MaTaiXe=DONHANG.MaTaiXe";
+                command.CommandText = "select DONHANG.MaDonHang, TAIXE.SDT, DONHANG.TongTien, DONHANG.DiaChiGiaoHang, DONHANG.PhiVanChuyen"+
+                    " from DONHANG,TAIXE"+
+                    " where TAIXE.CMND = @CMND and TAIXE.MaTaiXe=DONHANG.MaTaiXe";
                 command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("@CMND", tbCMND.Text);
                 adapter.SelectCommand = command;
                 tbDH_KV.Clear();
                 adapter.Fill(tbDH_KV);
-                dataGridView4.DataSource = tbDH_KV;
+                dataGridView3.DataSource = tbDH_KV;
             }
             catch (Exception ex)
             {
@@ -80,7 +82,7 @@ namespace HQTCSDL_DATH2
                 connection = new SqlConnection(str);
                 connection.Open();
                 command = connection.CreateCommand();
-                command.CommandText = "select DH_SP.MaSanPham,DH_SP.TenSanPham,DH_SP.SoLuong, DH_SP.DonGia, DONHANG.PhiVanChuyen" +
+                command.CommandText = "select DONHANG.MaDonHang,DH_SP.TenSanPham,DH_SP.SoLuong, DH_SP.DonGia" +
                     " from DH_SP,TAIXE,DONHANG"+
                     " where DONHANG.MaDonHang=DH_SP.MaDonHang and DONHANG.MaTaiXe=TAIXE.MaTaiXe and TAIXE.CMND=@CMND";
                 command.CommandType = CommandType.Text;
@@ -88,7 +90,7 @@ namespace HQTCSDL_DATH2
                 adapter.SelectCommand = command;
                 tbCTDH.Clear();
                 adapter.Fill(tbCTDH);
-                dataGridView3.DataSource = tbCTDH;
+                dataGridView4.DataSource = tbCTDH;
             }
             catch (Exception ex)
             {
