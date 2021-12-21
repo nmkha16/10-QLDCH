@@ -50,7 +50,7 @@ namespace HQTCSDL_DATH2
         {
             this.cnn.Open();
             string NDD = DoiTac_LHD_NDD.Text;
-            string TTKH = DoiTac_LHP_TTKH.Text;
+            string TTKH = comboBox1.Text;
             string PHH = DoiTac_LHD_PHH.Text;
             int PHH1 = Int32.Parse(PHH);
             string NHH = DoiTac_LHD_NHH.Text;
