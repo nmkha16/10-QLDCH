@@ -33,7 +33,7 @@ namespace HQTCSDL_DATH2
         {
             if (MST_textbox.Text.Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập mã đối tác");
+                MessageBox.Show("Vui lòng nhập mã số thuế");
                 this.Hide();
                 DoiTac DT1 = new DoiTac(itf, cnn);
                 DT1.ShowDialog();
@@ -45,7 +45,8 @@ namespace HQTCSDL_DATH2
         DataSet KiemTraDoiTac()
         {
             DataSet data = new DataSet();  
-            string query = "select * from doitac where masothue ='" + MST_textbox.Text+"'";
+            string query = "SELECT * FROM DOITAC WHERE MaSoThue =" + MST_textbox.Text;
+
 
             this.cnn.Open();
             SqlDataAdapter adt = new SqlDataAdapter(query, cnn);
@@ -68,6 +69,7 @@ namespace HQTCSDL_DATH2
 
         private void LapHD_btn_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
 
             DoiTac_LHD LHD = new DoiTac_LHD(this, cnn);
@@ -81,9 +83,26 @@ namespace HQTCSDL_DATH2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DoiTac_QLDH QLDH = new DoiTac_QLDH(this, cnn);
-            QLDH.ShowDialog();
+            if (MST_textbox.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập Mã số Thuế");
+            }
+            else
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM DOITAC WHERE MaSoThue = "
+                       + MST_textbox.Text.ToString(), cnn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    this.Hide();
+                    DoiTac_QLDH QLDH = new DoiTac_QLDH(this, cnn, MST_textbox.Text);
+                    QLDH.ShowDialog();
+                    
+                }
+                else MessageBox.Show("Vui lòng nhập Mã số thuế hợp lệ để quản lý đơn hàng!!");
+            }
         }
 
         private void signup_btn_Click(object sender, EventArgs e)
