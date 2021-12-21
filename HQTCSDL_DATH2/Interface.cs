@@ -80,7 +80,7 @@ namespace HQTCSDL_DATH2
             {
                 
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM ADMINISTRATOR WHERE UserID ="
-                    + ID_box.Text.ToString() + " AND Password ='" + Password_box.Text + "'", cnn);
+                    + ID_box.Text.ToString() + " AND Password ='" + Password_box.Text + "'" + " AND TinhTrang = 'MO'", cnn);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 
@@ -91,7 +91,7 @@ namespace HQTCSDL_DATH2
                     QL.Show();
                 }
                 else
-                    MessageBox.Show("Invalid username or password");
+                    MessageBox.Show("Tài khoản của bạn không hợp lệ hoặc đã bị khóa");
             }
         }
         /*
