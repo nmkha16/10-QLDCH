@@ -15,13 +15,15 @@ namespace HQTCSDL_DATH2
     {
         private DoiTac dt;
         private SqlConnection cnn;
+        private string MST;
         
-        public DoiTac_QLDH(DoiTac dt, SqlConnection cnn)
+        public DoiTac_QLDH(DoiTac dt, SqlConnection cnn, string MST)
         {
             InitializeComponent();
             this.FormClosing += DoiTac_QLDH_FormClosing;
             this.dt = dt;
             this.cnn = cnn;
+            this.MST = MST;
             DisplayData();
         }
 
@@ -34,7 +36,8 @@ namespace HQTCSDL_DATH2
         {
             cnn.Open();
             DataTable data = new DataTable();
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT MaDonHang, MaKhachHang, TinhTrangDonHang, DiaChiGiaoHang, PhiVanChuyen, TongTien FROM DONHANG", cnn);
+            SqlDataAdapter adapt = new SqlDataAdapter("SELECT MaDonHang, MaKhachHang, TinhTrangDonHang, DiaChiGiaoHang, PhiVanChuyen, TongTien FROM DONHANG dh, DOITAC dt"
+                                                                                                                                                +" WHERE dh.MADT = dt.MADT AND dt.MaSoThue =" + MST, cnn);
             adapt.Fill(data);
             dataGridView_TTDH.DataSource = data;
             cnn.Close();
