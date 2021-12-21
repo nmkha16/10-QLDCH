@@ -86,7 +86,7 @@ namespace HQTCSDL_DATH2
                 
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                    Admin_QL QL = new Admin_QL();
+                    Admin_QL QL = new Admin_QL(this, this.cnn);
                     this.Hide();
                     QL.Show();
                 }

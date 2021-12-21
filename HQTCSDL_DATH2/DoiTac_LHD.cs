@@ -15,7 +15,6 @@ namespace HQTCSDL_DATH2
     {
         private DoiTac dt;
         private SqlConnection cnn;
-        //private DoiTac_LHD lhd;
         public DoiTac_LHD()
         {
             InitializeComponent();
