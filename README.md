@@ -1,5 +1,17 @@
 # 10-QLDCH
  Ứng dụng quản lí đặt và chuyển hàng
+# Khách hàng
+## Nút đăng ký
+## Nút xem lịch sử đơn hàng
+```
+Bấm vào một dòng bất kì để xem chi tiết đơn hàng
+```
+## Nút đặt hàng
+```
+Bấm vào một dòng bất kì là một đối tác, bảng kế bên sẽ liệt danh sách sản phẩm của đối tác ấy.
+Bấm vào một sản phẩm để thêm vào giỏ hàng, có thể tuỳ chỉnh cột số lượng
+Double click vào sản phẩm bên bảng giỏ hàng để loại bỏ sản phẩm
+```
 # Tài xế
 ## Nút kiểm tra
 ```
@@ -35,4 +47,34 @@ Xem tình trạng kích hoạt của hợp đồng
 ```
 Duyệt hợp đồng của đối tác
 ```
-
+# Quản trị
+```
+Thêm tài khoản: Nhập đủ các thông tin
+Xóa, Khóa, Kích hoạt tài khoản : Nhập ID là đc
+```
+# Đối Tác
+## Tìm kiếm ĐT
+```
+Nhập Mã số thuế
+```
+## Lập hợp đồng
+```
+Nhập đủ các thông tin
+```
+## Đăng ký
+```
+Nhập đủ các thông tin
+```
+## Quản lý sản phẩm
+#### Thêm sản phẩm
+```
+Thêm sản phẩm
+```
+#### Sửa sản phẩm
+```
+Chỉ cần nhập mã sản phẩm
+```
+## Quản lý đơn hàng
+```
+Nhập Mã đơn hàng + Tình trạng để cập nhật tình trạng đơn hàng
+```
