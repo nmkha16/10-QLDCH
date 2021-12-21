@@ -96,7 +96,7 @@ namespace HQTCSDL_DATH2
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DoiTac_QLSP QLSP = new DoiTac_QLSP(this, cnn);
+            DoiTac_QLSP QLSP = new DoiTac_QLSP();
             QLSP.ShowDialog();
         }
     }
