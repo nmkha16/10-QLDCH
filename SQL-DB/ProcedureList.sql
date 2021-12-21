@@ -145,3 +145,55 @@ BEGIN
 END
 GO
 UPDATE DONHANG SET TinhTrangDonHang = 'TTDH_comboBox.Text' WHERE MaDonHang =  @MaDH
+
+CREATE PROC TaoTaiKhoan(@HoTen varchar(50),@UserID int,  @Password varchar(20), @NgaySinh date)
+AS 
+BEGIN
+	INSERT INTO Administrator( HoTen, UserID, Password, NgaySinh)
+	VALUES (@HoTen, @UserID, @Password, @NgaySinh)
+END 
+GO
+
+CREATE PROC KhoaTK(@UserID int)
+AS
+BEGIN
+	Update Administrator
+	SET TinhTrang = 'KHOA'
+	WHERE UserID = @UserID
+END 
+GO
+
+CREATE PROC MoTK(@UserID int)
+AS
+BEGIN
+	Update Administrator
+	SET TinhTrang = 'MO'
+	WHERE UserID = @UserID
+END 
+GO
+
+CREATE PROC XoaTK(@UserID int)
+AS
+BEGIN
+	DELETE FROM Administrator WHERE UserID = @UserID
+END 
+GO
+
+CREATE PROC ThemSanPham(@TenSanPham varchar(50), @DonGia int) 
+AS
+BEGIN
+	INSERT INTO SANPHAM(TenSanPham, DonGia)
+				VALUES (@TenSanPham, @DonGia)
+END
+GO
+
+CREATE PROC SuaSanPham(@MaSanPham int, @TenSanPham varchar(50), @DonGia int)
+AS
+BEGIN
+	UPDATE SANPHAM
+	SET TenSanPham = @TenSanPham, DonGia = @DonGia 
+	WHERE MaSanPham = @MaSanPham
+END
+GO
+
+
