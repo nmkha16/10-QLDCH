@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dongia_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensanpham_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madonhang_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,61 +35,28 @@
             this.tensanpham1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.madonhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachigiaohang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phivanchuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonkt = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbCMND = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tensanpham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dongia_1
-            // 
-            this.dongia_1.HeaderText = "Đơn giá";
-            this.dongia_1.MinimumWidth = 6;
-            this.dongia_1.Name = "dongia_1";
-            this.dongia_1.Width = 125;
-            // 
-            // tensanpham_1
-            // 
-            this.tensanpham_1.HeaderText = "Tên sản phẩm";
-            this.tensanpham_1.MinimumWidth = 6;
-            this.tensanpham_1.Name = "tensanpham_1";
-            this.tensanpham_1.Width = 125;
-            // 
-            // madonhang_1
-            // 
-            this.madonhang_1.HeaderText = "Mã đơn hàng";
-            this.madonhang_1.MinimumWidth = 6;
-            this.madonhang_1.Name = "madonhang_1";
-            this.madonhang_1.Width = 125;
-            // 
-            // soluong
-            // 
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.MinimumWidth = 6;
-            this.soluong.Name = "soluong";
-            this.soluong.Width = 125;
             // 
             // dongia1
             // 
@@ -167,80 +130,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Danh sách đơn hàng theo khu vực";
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madonhang_1,
-            this.tensanpham_1,
-            this.soluong,
-            this.dongia_1});
-            this.dataGridView3.Location = new System.Drawing.Point(515, 114);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(500, 341);
-            this.dataGridView3.TabIndex = 1;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madonhang,
-            this.sodienthoai,
-            this.tongtien,
-            this.diachigiaohang,
-            this.phivanchuyen});
-            this.dataGridView4.Location = new System.Drawing.Point(13, 114);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.Size = new System.Drawing.Size(484, 337);
-            this.dataGridView4.TabIndex = 0;
-            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // madonhang
-            // 
-            this.madonhang.HeaderText = "Mã đơn hàng";
-            this.madonhang.MinimumWidth = 6;
-            this.madonhang.Name = "madonhang";
-            this.madonhang.Width = 125;
-            // 
-            // sodienthoai
-            // 
-            this.sodienthoai.HeaderText = "Số điện thoại";
-            this.sodienthoai.MinimumWidth = 6;
-            this.sodienthoai.Name = "sodienthoai";
-            this.sodienthoai.Width = 125;
-            // 
-            // tongtien
-            // 
-            this.tongtien.HeaderText = "Tổng tiền";
-            this.tongtien.MinimumWidth = 6;
-            this.tongtien.Name = "tongtien";
-            this.tongtien.Width = 125;
-            // 
-            // diachigiaohang
-            // 
-            this.diachigiaohang.HeaderText = "Địa chỉ giao hàng";
-            this.diachigiaohang.MinimumWidth = 6;
-            this.diachigiaohang.Name = "diachigiaohang";
-            this.diachigiaohang.Width = 125;
-            // 
-            // phivanchuyen
-            // 
-            this.phivanchuyen.HeaderText = "Phí vận chuyển";
-            this.phivanchuyen.MinimumWidth = 6;
-            this.phivanchuyen.Name = "phivanchuyen";
-            this.phivanchuyen.Width = 125;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
@@ -282,6 +171,8 @@
             // 
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.Controls.Add(this.dataGridView3);
+            this.panel2.Controls.Add(this.dataGridView4);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.buttonkt);
             this.panel2.Controls.Add(this.label5);
@@ -289,14 +180,22 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.dataGridView3);
-            this.panel2.Controls.Add(this.dataGridView4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1028, 459);
             this.panel2.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(426, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Quay lại";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonkt
             // 
@@ -352,15 +251,25 @@
             this.dongia.Name = "dongia";
             this.dongia.Width = 125;
             // 
-            // button1
+            // dataGridView4
             // 
-            this.button1.Location = new System.Drawing.Point(426, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Quay lại";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(16, 118);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(467, 314);
+            this.dataGridView4.TabIndex = 10;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(537, 118);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(467, 314);
+            this.dataGridView3.TabIndex = 11;
             // 
             // TaiXe_TNDH
             // 
@@ -374,24 +283,19 @@
             this.Load += new System.EventHandler(this.TaiXe_TNDH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn dongia_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tensanpham_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madonhang_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
@@ -399,13 +303,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tensanpham1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madonhang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachigiaohang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phivanchuyen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
@@ -417,5 +314,7 @@
         private System.Windows.Forms.TextBox tbCMND;
         private System.Windows.Forms.Button buttonkt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
