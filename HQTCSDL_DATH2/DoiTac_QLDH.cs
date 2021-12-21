@@ -51,10 +51,10 @@ namespace HQTCSDL_DATH2
             if (TTDH_comboBox.Text != "")
             {
                 string TinhTrang = TTDH_comboBox.Text;
-                SqlCommand cmd = new SqlCommand("UPDATE DONHANG SET TinhTrangDonHang = '" + TinhTrang + "' WHERE MaDonHang = " + @MaDH , cnn);
+                string MaDH = textBox1.Text;
+                int MaDH1 = Int32.Parse(MaDH);
+                SqlCommand cmd = new SqlCommand("UPDATE DONHANG SET TinhTrangDonHang = '" + TinhTrang + "' WHERE MaDonHang = " + MaDH1 , cnn);
                 cnn.Open();
-                
-                cmd.Parameters.AddWithValue("@MaDH", MaDH);
                
                 cmd.ExecuteNonQuery();
                 cnn.Close();
@@ -74,6 +74,11 @@ namespace HQTCSDL_DATH2
             MaDH = dataGridView_TTDH.Rows[e.RowIndex].Cells[0].Value.ToString();
             //txt_Name.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[1].Value.ToString();
             TTDH_comboBox.Text = dataGridView_TTDH.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
