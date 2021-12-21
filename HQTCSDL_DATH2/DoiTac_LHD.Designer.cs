@@ -34,12 +34,12 @@
             this.TaoHD_btn = new System.Windows.Forms.Button();
             this.DoiTac_LHD_PHH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.DoiTac_LHP_TTKH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.DoiTac_LHD_NDD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.DoiTac_LHD_PTHH = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // DoiTac_LHD_NHH
@@ -106,16 +106,6 @@
             this.label4.TabIndex = 35;
             this.label4.Text = "Phí hoa hồng";
             // 
-            // DoiTac_LHP_TTKH
-            // 
-            this.DoiTac_LHP_TTKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DoiTac_LHP_TTKH.Location = new System.Drawing.Point(123, 29);
-            this.DoiTac_LHP_TTKH.Name = "DoiTac_LHP_TTKH";
-            this.DoiTac_LHP_TTKH.Size = new System.Drawing.Size(297, 20);
-            this.DoiTac_LHP_TTKH.TabIndex = 34;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -167,11 +157,23 @@
             this.DoiTac_LHD_PTHH.Size = new System.Drawing.Size(294, 20);
             this.DoiTac_LHD_PTHH.TabIndex = 43;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "YES",
+            "NO"});
+            this.comboBox1.Location = new System.Drawing.Point(125, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(294, 21);
+            this.comboBox1.TabIndex = 44;
+            // 
             // DoiTac_LHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 161);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.DoiTac_LHD_PTHH);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DoiTac_LHD_NHH);
@@ -180,7 +182,6 @@
             this.Controls.Add(this.TaoHD_btn);
             this.Controls.Add(this.DoiTac_LHD_PHH);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.DoiTac_LHP_TTKH);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DoiTac_LHD_NDD);
             this.Controls.Add(this.label2);
@@ -198,11 +199,11 @@
         private System.Windows.Forms.Button TaoHD_btn;
         private System.Windows.Forms.TextBox DoiTac_LHD_PHH;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox DoiTac_LHP_TTKH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox DoiTac_LHD_NDD;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox DoiTac_LHD_PTHH;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
