@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(586, 275);
+            this.panel1.Size = new System.Drawing.Size(349, 207);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -72,7 +72,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(586, 275);
+            this.panel2.Size = new System.Drawing.Size(349, 207);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -80,24 +80,25 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(549, 63);
+            this.dataGridView1.Size = new System.Drawing.Size(318, 63);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(103, 159);
+            this.button3.Location = new System.Drawing.Point(96, 142);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 41);
             this.button3.TabIndex = 6;
             this.button3.Text = "Quản lý sản phẩm";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // QLDB_btn
             // 
             this.QLDB_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QLDB_btn.Location = new System.Drawing.Point(202, 159);
+            this.QLDB_btn.Location = new System.Drawing.Point(177, 142);
             this.QLDB_btn.Name = "QLDB_btn";
             this.QLDB_btn.Size = new System.Drawing.Size(75, 41);
             this.QLDB_btn.TabIndex = 5;
@@ -107,7 +108,7 @@
             // 
             // LapHD_btn
             // 
-            this.LapHD_btn.Location = new System.Drawing.Point(12, 159);
+            this.LapHD_btn.Location = new System.Drawing.Point(15, 142);
             this.LapHD_btn.Name = "LapHD_btn";
             this.LapHD_btn.Size = new System.Drawing.Size(75, 41);
             this.LapHD_btn.TabIndex = 4;
@@ -117,7 +118,7 @@
             // 
             // validate_btn
             // 
-            this.validate_btn.Location = new System.Drawing.Point(257, 19);
+            this.validate_btn.Location = new System.Drawing.Point(265, 19);
             this.validate_btn.Name = "validate_btn";
             this.validate_btn.Size = new System.Drawing.Size(68, 20);
             this.validate_btn.TabIndex = 3;
@@ -144,7 +145,7 @@
             // 
             // signup_btn
             // 
-            this.signup_btn.Location = new System.Drawing.Point(299, 159);
+            this.signup_btn.Location = new System.Drawing.Point(258, 142);
             this.signup_btn.Name = "signup_btn";
             this.signup_btn.Size = new System.Drawing.Size(75, 41);
             this.signup_btn.TabIndex = 0;
@@ -166,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 275);
+            this.ClientSize = new System.Drawing.Size(349, 207);
             this.Controls.Add(this.panel1);
             this.Name = "DoiTac";
             this.Text = "DoiTac";
